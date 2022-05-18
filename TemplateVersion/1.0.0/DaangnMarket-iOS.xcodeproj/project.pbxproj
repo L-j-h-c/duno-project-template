@@ -30,7 +30,6 @@
 		EBB25FD62831D84F001416D8 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FD52831D84F001416D8 /* UIImage+.swift */; };
 		EBB25FDC2831DA86001416D8 /* Adjusted+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FDB2831DA86001416D8 /* Adjusted+.swift */; };
 		EBB25FDE2831DAB4001416D8 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FDD2831DAB4001416D8 /* Storyboarded.swift */; };
-		EBB25FE02831E6B1001416D8 /* addSubViewFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FDF2831E6B1001416D8 /* addSubViewFromNib.swift */; };
 		EBB25FE42831E803001416D8 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FE32831E803001416D8 /* BaseCoordinator.swift */; };
 		EBB25FE62831E81B001416D8 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FE52831E81B001416D8 /* Presentable.swift */; };
 		EBB25FE82831E865001416D8 /* CoordinatorFinishOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FE72831E865001416D8 /* CoordinatorFinishOutput.swift */; };
@@ -69,6 +68,16 @@
 		EBB2603D28322C19001416D8 /* PostWriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2603C28322C19001416D8 /* PostWriteVC.swift */; };
 		EBB2603F28322C21001416D8 /* PostWrite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB2603E28322C21001416D8 /* PostWrite.storyboard */; };
 		EBB2604128322F8A001416D8 /* ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2604028322F8A001416D8 /* ImageLiterals.swift */; };
+		EBB2607C283521B6001416D8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2607B283521B5001416D8 /* Router.swift */; };
+		EBB2607E2835221F001416D8 /* HeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2607D2835221E001416D8 /* HeaderType.swift */; };
+		EBB2608028352233001416D8 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2607F28352232001416D8 /* BaseService.swift */; };
+		EBB2608228352248001416D8 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2608128352248001416D8 /* NetworkResult.swift */; };
+		EBB2608428352276001416D8 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2608328352276001416D8 /* NetworkConstants.swift */; };
+		EBB260862835228A001416D8 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260852835228A001416D8 /* AuthRouter.swift */; };
+		EBB26088283522A1001416D8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB26087283522A1001416D8 /* AuthService.swift */; };
+		EBB2608A28352312001416D8 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2608928352312001416D8 /* GeneralResponse.swift */; };
+		EBB2608D28352338001416D8 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2608C28352338001416D8 /* SignIn.swift */; };
+		EBB2608F28352347001416D8 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2608E28352347001416D8 /* SignUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,7 +108,6 @@
 		EBB25FD52831D84F001416D8 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		EBB25FDB2831DA86001416D8 /* Adjusted+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjusted+.swift"; sourceTree = "<group>"; };
 		EBB25FDD2831DAB4001416D8 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
-		EBB25FDF2831E6B1001416D8 /* addSubViewFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addSubViewFromNib.swift; sourceTree = "<group>"; };
 		EBB25FE32831E803001416D8 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		EBB25FE52831E81B001416D8 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		EBB25FE72831E865001416D8 /* CoordinatorFinishOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishOutput.swift; sourceTree = "<group>"; };
@@ -138,6 +146,16 @@
 		EBB2603C28322C19001416D8 /* PostWriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWriteVC.swift; sourceTree = "<group>"; };
 		EBB2603E28322C21001416D8 /* PostWrite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostWrite.storyboard; sourceTree = "<group>"; };
 		EBB2604028322F8A001416D8 /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
+		EBB2607B283521B5001416D8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EBB2607D2835221E001416D8 /* HeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderType.swift; sourceTree = "<group>"; };
+		EBB2607F28352232001416D8 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		EBB2608128352248001416D8 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		EBB2608328352276001416D8 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		EBB260852835228A001416D8 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		EBB26087283522A1001416D8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		EBB2608928352312001416D8 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		EBB2608C28352338001416D8 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		EBB2608E28352347001416D8 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,7 +267,6 @@
 			isa = PBXGroup;
 			children = (
 				EBB25FDB2831DA86001416D8 /* Adjusted+.swift */,
-				EBB25FDF2831E6B1001416D8 /* addSubViewFromNib.swift */,
 				EBB25FFA2831EE7E001416D8 /* setRootViewController.swift */,
 				EBB25FFC2831EEF6001416D8 /* Logger.swift */,
 				EBB25FFE2831EF11001416D8 /* JsonCoder.swift */,
@@ -346,6 +363,10 @@
 		EBB25FA22831154F001416D8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				EBB26077283520A4001416D8 /* Foundation */,
+				EBB2607A28352189001416D8 /* Environment */,
+				EBB2607828352164001416D8 /* Routers */,
+				EBB2607928352183001416D8 /* Service */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -360,6 +381,8 @@
 		EBB25FA428311568001416D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EBB2608B28352325001416D8 /* Auth */,
+				EBB2608928352312001416D8 /* GeneralResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -568,6 +591,50 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		EBB26077283520A4001416D8 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				EBB2607B283521B5001416D8 /* Router.swift */,
+				EBB2607D2835221E001416D8 /* HeaderType.swift */,
+				EBB2607F28352232001416D8 /* BaseService.swift */,
+				EBB2608128352248001416D8 /* NetworkResult.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		EBB2607828352164001416D8 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				EBB260852835228A001416D8 /* AuthRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		EBB2607928352183001416D8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EBB26087283522A1001416D8 /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		EBB2607A28352189001416D8 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				EBB2608328352276001416D8 /* NetworkConstants.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		EBB2608B28352325001416D8 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EBB2608C28352338001416D8 /* SignIn.swift */,
+				EBB2608E28352347001416D8 /* SignUp.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		F94A29A01BE128371292BB9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -694,15 +761,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB2601D28321538001416D8 /* StoryboardLiterals.swift in Sources */,
+				EBB2608A28352312001416D8 /* GeneralResponse.swift in Sources */,
+				EBB26088283522A1001416D8 /* AuthService.swift in Sources */,
 				EBB2602728321E3F001416D8 /* PostDetailVC.swift in Sources */,
 				EBB26037283225D0001416D8 /* Result+.swift in Sources */,
 				EBB25FC228311E95001416D8 /* UserDefaults+.swift in Sources */,
 				EBB25FAE2831194A001416D8 /* UILabel+.swift in Sources */,
 				EBB26039283226BB001416D8 /* BaseNotiList.swift in Sources */,
 				EBB25FA828311911001416D8 /* UIView+.swift in Sources */,
+				EBB2608228352248001416D8 /* NetworkResult.swift in Sources */,
 				EBB25FC028311E72001416D8 /* UIViewController+.swift in Sources */,
+				EBB2607E2835221F001416D8 /* HeaderType.swift in Sources */,
 				EBB25FB628311D65001416D8 /* UIFont+.swift in Sources */,
 				EBB25FF22831E8EA001416D8 /* Router.swift in Sources */,
+				EBB2608428352276001416D8 /* NetworkConstants.swift in Sources */,
 				EBB25FAC28311937001416D8 /* UITextField+.swift in Sources */,
 				EBB260152831F38D001416D8 /* applyShadow.swift in Sources */,
 				EBB2600B2831F2A5001416D8 /* makeVibrate.swift in Sources */,
@@ -712,11 +784,13 @@
 				EBB25FF72831E930001416D8 /* CoordinatorFactory.swift in Sources */,
 				EBB25FB028311956001416D8 /* Reactive+.swift in Sources */,
 				EBB25FFB2831EE7E001416D8 /* setRootViewController.swift in Sources */,
+				EBB2608F28352347001416D8 /* SignUp.swift in Sources */,
 				EBB2600F2831F313001416D8 /* getClassName.swift in Sources */,
 				EBB25FEF2831E8CA001416D8 /* LaunchInstructor.swift in Sources */,
 				EBB25FF92831EB2E001416D8 /* controllerFromStoryBoard.swift in Sources */,
 				EBB2602028321D1D001416D8 /* BaseVC.swift in Sources */,
 				EBB25FF52831E91C001416D8 /* ModuleFactory.swift in Sources */,
+				EBB2607C283521B6001416D8 /* Router.swift in Sources */,
 				EBB25FBC28311DF4001416D8 /* UITableView+.swift in Sources */,
 				EBB25FBA28311DE1001416D8 /* UITabBar+.swift in Sources */,
 				EBB2603D28322C19001416D8 /* PostWriteVC.swift in Sources */,
@@ -729,14 +803,16 @@
 				EBB25FE82831E865001416D8 /* CoordinatorFinishOutput.swift in Sources */,
 				EBB25FE62831E81B001416D8 /* Presentable.swift in Sources */,
 				EBB25FEA2831E88D001416D8 /* BaseControllable.swift in Sources */,
+				EBB2608028352233001416D8 /* BaseService.swift in Sources */,
 				EBB25FEC2831E8A2001416D8 /* Coordinator.swift in Sources */,
 				EBB260132831F36E001416D8 /* calculatePastTime.swift in Sources */,
 				EBB25FE42831E803001416D8 /* BaseCoordinator.swift in Sources */,
 				EBB260052831F18D001416D8 /* setDefaultFonts.swift in Sources */,
+				EBB2608D28352338001416D8 /* SignIn.swift in Sources */,
 				EBB2601728321205001416D8 /* UITableViewRegisterable.swift in Sources */,
+				EBB260862835228A001416D8 /* AuthRouter.swift in Sources */,
 				EBB25F7728311102001416D8 /* SceneDelegate.swift in Sources */,
 				EBB2600D2831F2D0001416D8 /* makeAlert.swift in Sources */,
-				EBB25FE02831E6B1001416D8 /* addSubViewFromNib.swift in Sources */,
 				EBB25FD22831D7D2001416D8 /* UIDevice+.swift in Sources */,
 				EBB25FAA28311926001416D8 /* UIStackView+.swift in Sources */,
 				EBB260012831EFDE001416D8 /* ShowToast.swift in Sources */,
