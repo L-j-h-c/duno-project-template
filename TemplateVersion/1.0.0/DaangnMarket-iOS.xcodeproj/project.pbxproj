@@ -68,7 +68,7 @@
 		EBB2603D28322C19001416D8 /* PostWriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2603C28322C19001416D8 /* PostWriteVC.swift */; };
 		EBB2603F28322C21001416D8 /* PostWrite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB2603E28322C21001416D8 /* PostWrite.storyboard */; };
 		EBB2604128322F8A001416D8 /* ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2604028322F8A001416D8 /* ImageLiterals.swift */; };
-		EBB2607C283521B6001416D8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2607B283521B5001416D8 /* Router.swift */; };
+		EBB2607C283521B6001416D8 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2607B283521B5001416D8 /* BaseRouter.swift */; };
 		EBB2607E2835221F001416D8 /* HeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2607D2835221E001416D8 /* HeaderType.swift */; };
 		EBB2608028352233001416D8 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2607F28352232001416D8 /* BaseService.swift */; };
 		EBB2608228352248001416D8 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2608128352248001416D8 /* NetworkResult.swift */; };
@@ -146,7 +146,7 @@
 		EBB2603C28322C19001416D8 /* PostWriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWriteVC.swift; sourceTree = "<group>"; };
 		EBB2603E28322C21001416D8 /* PostWrite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostWrite.storyboard; sourceTree = "<group>"; };
 		EBB2604028322F8A001416D8 /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
-		EBB2607B283521B5001416D8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EBB2607B283521B5001416D8 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		EBB2607D2835221E001416D8 /* HeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderType.swift; sourceTree = "<group>"; };
 		EBB2607F28352232001416D8 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		EBB2608128352248001416D8 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
@@ -366,7 +366,7 @@
 				EBB26077283520A4001416D8 /* Foundation */,
 				EBB2607A28352189001416D8 /* Environment */,
 				EBB2607828352164001416D8 /* Routers */,
-				EBB2607928352183001416D8 /* Service */,
+				EBB2607928352183001416D8 /* Services */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -594,7 +594,7 @@
 		EBB26077283520A4001416D8 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				EBB2607B283521B5001416D8 /* Router.swift */,
+				EBB2607B283521B5001416D8 /* BaseRouter.swift */,
 				EBB2607D2835221E001416D8 /* HeaderType.swift */,
 				EBB2607F28352232001416D8 /* BaseService.swift */,
 				EBB2608128352248001416D8 /* NetworkResult.swift */,
@@ -610,12 +610,12 @@
 			path = Routers;
 			sourceTree = "<group>";
 		};
-		EBB2607928352183001416D8 /* Service */ = {
+		EBB2607928352183001416D8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				EBB26087283522A1001416D8 /* AuthService.swift */,
 			);
-			path = Service;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		EBB2607A28352189001416D8 /* Environment */ = {
@@ -790,7 +790,7 @@
 				EBB25FF92831EB2E001416D8 /* controllerFromStoryBoard.swift in Sources */,
 				EBB2602028321D1D001416D8 /* BaseVC.swift in Sources */,
 				EBB25FF52831E91C001416D8 /* ModuleFactory.swift in Sources */,
-				EBB2607C283521B6001416D8 /* Router.swift in Sources */,
+				EBB2607C283521B6001416D8 /* BaseRouter.swift in Sources */,
 				EBB25FBC28311DF4001416D8 /* UITableView+.swift in Sources */,
 				EBB25FBA28311DE1001416D8 /* UITabBar+.swift in Sources */,
 				EBB2603D28322C19001416D8 /* PostWriteVC.swift in Sources */,
