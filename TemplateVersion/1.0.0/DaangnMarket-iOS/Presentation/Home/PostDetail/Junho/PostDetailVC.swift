@@ -19,12 +19,27 @@ final class PostDetailVC: BaseVC, Storyboarded {
     
     
     // MARK: - Life Cycles
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .blue
-        bind()
+        AuthService.shared.uploadPicture(email: "", name: "", pw: "") { networkResult in
+            switch networkResult {
+                
+            case .success:
+                print("성공")
+            case .requestErr(let status):
+                print(status)
+
+            case .pathErr:
+                print("pathERRR")
+            case .serverErr:
+                print("serverE")
+            case .networkFail:
+                print("fail")
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -47,5 +47,22 @@ extension AuthService {
             }
         }
     }
+    func uploadPicture(email: String, name: String, pw: String, completion: @escaping (NetworkResult<Any>) -> (Void)) {
+        AFManager.upload(
+            multipartFormData: AuthRouter.upload(image: UIImage()).multipart,
+            with: AuthRouter.upload(image: UIImage())).responseData { response in
+            switch response.result {
+            case .success:
+                guard let statusCode = response.response?.statusCode else { return }
+                guard let data = response.data else { return}
+                let networkResult = self.judgeStatus(by: statusCode, data, type: SignIn.self, decodingMode: .message)
+                
+                completion(networkResult)
+                
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
+    }
 }
 
