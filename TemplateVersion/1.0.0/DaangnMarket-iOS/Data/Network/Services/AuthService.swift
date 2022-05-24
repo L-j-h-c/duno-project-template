@@ -47,7 +47,7 @@ extension AuthService {
             }
         }
     }
-    func uploadPicture(email: String, name: String, pw: String, completion: @escaping (NetworkResult<Any>) -> (Void)) {
+    func uploadPicture(completion: @escaping (NetworkResult<Any>) -> (Void)) {
         AFManager.upload(
             multipartFormData: AuthRouter.upload(image: UIImage()).multipart,
             with: AuthRouter.upload(image: UIImage())).responseData { response in

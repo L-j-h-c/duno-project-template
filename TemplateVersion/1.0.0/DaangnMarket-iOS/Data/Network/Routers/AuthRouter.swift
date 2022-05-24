@@ -29,7 +29,7 @@ extension AuthRouter: BaseRouter {
         case .requestSignUp:
             return "/auth/signup"
         case .requestSignIn:
-            return "/auth/signin"
+            return "/auth/"
         case .upload:
             return "/feed"
         default: return ""

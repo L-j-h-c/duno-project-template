@@ -85,7 +85,7 @@ extension BaseRouter {
 
 extension BaseRouter {
     var baseURL: String {
-        return URLConstants.multiPartPractice
+        return URLConstants.baseURL
     }
     
     var header: HeaderType {

@@ -78,6 +78,7 @@
 		EBB2608A28352312001416D8 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2608928352312001416D8 /* GeneralResponse.swift */; };
 		EBB2608D28352338001416D8 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2608C28352338001416D8 /* SignIn.swift */; };
 		EBB2608F28352347001416D8 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2608E28352347001416D8 /* SignUp.swift */; };
+		EBB260CC283D029B001416D8 /* EventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260CB283D029B001416D8 /* EventLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +157,7 @@
 		EBB2608928352312001416D8 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
 		EBB2608C28352338001416D8 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		EBB2608E28352347001416D8 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		EBB260CB283D029B001416D8 /* EventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -598,6 +600,7 @@
 				EBB2607D2835221E001416D8 /* HeaderType.swift */,
 				EBB2607F28352232001416D8 /* BaseService.swift */,
 				EBB2608128352248001416D8 /* NetworkResult.swift */,
+				EBB260CB283D029B001416D8 /* EventLogger.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -762,6 +765,7 @@
 			files = (
 				EBB2601D28321538001416D8 /* StoryboardLiterals.swift in Sources */,
 				EBB2608A28352312001416D8 /* GeneralResponse.swift in Sources */,
+				EBB260CC283D029B001416D8 /* EventLogger.swift in Sources */,
 				EBB26088283522A1001416D8 /* AuthService.swift in Sources */,
 				EBB2602728321E3F001416D8 /* PostDetailVC.swift in Sources */,
 				EBB26037283225D0001416D8 /* Result+.swift in Sources */,
