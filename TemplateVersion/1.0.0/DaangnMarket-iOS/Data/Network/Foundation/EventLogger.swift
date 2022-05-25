@@ -13,13 +13,14 @@ class APIEventLogger: EventMonitor {
     let queue = DispatchQueue(label: "NetworkLogger")
     
     func requestDidFinish(_ request: Request) {
-        print("----------------------------------------------------\n")
-        print("              🛰 NETWORK Reqeust LOG")
-        print("\n----------------------------------------------------\n1️⃣ URL / Method / Header" + "\n" + "URL: " + (request.request?.url?.absoluteString ?? "")  + "\n"
+        print("----------------------------------------------------\n\n" + "              🛰 NETWORK Reqeust LOG\n" + "\n----------------------------------------------------")
+        print("1️⃣ URL / Method / Header" + "\n" + "URL: " + (request.request?.url?.absoluteString ?? "")  + "\n"
               + "Method: " + (request.request?.httpMethod ?? "") + "\n"
               + "Headers: " + "\(request.request?.allHTTPHeaderFields ?? [:])")
         print("----------------------------------------------------\n2️⃣ Body")
-        print("Body: " + (request.request?.httpBody?.toPrettyPrintedString ?? ""))
+        if let body = request.request?.httpBody?.toPrettyPrintedString {
+            print("Body: \(body)")
+        } else { print("보낸 Body가 없습니다.")}
         print("----------------------------------------------------\n")
     }
     
