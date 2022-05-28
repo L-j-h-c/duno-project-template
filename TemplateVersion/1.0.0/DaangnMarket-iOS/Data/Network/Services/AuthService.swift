@@ -2,7 +2,7 @@
 //  AuthService.swift
 //  DaangnMarket-iOS
 //
-//  Created by Junho Lee on 2022/05/18.
+//  Created by Junho Lee on 2022/05/21.
 //
 
 import Foundation
@@ -47,22 +47,4 @@ extension AuthService {
             }
         }
     }
-    func uploadPicture(completion: @escaping (NetworkResult<Any>) -> (Void)) {
-        AFManager.upload(
-            multipartFormData: AuthRouter.upload(image: UIImage()).multipart,
-            with: AuthRouter.upload(image: UIImage())).responseData { response in
-            switch response.result {
-            case .success:
-                guard let statusCode = response.response?.statusCode else { return }
-                guard let data = response.data else { return}
-                let networkResult = self.judgeStatus(by: statusCode, data, type: SignIn.self, decodingMode: .message)
-                
-                completion(networkResult)
-                
-            case .failure(let err):
-                print(err.localizedDescription)
-            }
-        }
-    }
 }
-

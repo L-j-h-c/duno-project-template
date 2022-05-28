@@ -2,7 +2,7 @@
 //  EventLogger.swift
 //  DaangnMarket-iOS
 //
-//  Created by Junho Lee on 2022/05/24.
+//  Created by Junho Lee on 2022/05/25.
 //
 
 import Alamofire

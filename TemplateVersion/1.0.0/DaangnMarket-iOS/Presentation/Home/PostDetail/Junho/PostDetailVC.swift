@@ -25,6 +25,15 @@ final class PostDetailVC: BaseVC, Storyboarded {
         
         view.backgroundColor = .blue
         
+        AuthService.shared.uploadPicture() { networkResult in
+            switch networkResult {
+            
+            case .success(_):
+                break;
+            default: break;
+            }
+        }
+        
         AuthService.shared.requestSignIn(email: "iOS@sopt.org", pw: "123456") { networkResult in
             switch networkResult {
             

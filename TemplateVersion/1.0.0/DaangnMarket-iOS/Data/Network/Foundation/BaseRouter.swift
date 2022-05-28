@@ -2,7 +2,7 @@
 //  Router.swift
 //  DaangnMarket-iOS
 //
-//  Created by Junho Lee on 2022/05/18.
+//  Created by Junho Lee on 2022/05/21.
 //
 
 import Foundation
@@ -60,21 +60,25 @@ extension BaseRouter {
         switch parameters {
             
         case .query(let query):
-            let params = query?.toDictionary() ?? [:]
-            let queryParams = params.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
+            let queryParams = query.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
             var components = URLComponents(string: url.appendingPathComponent(path).absoluteString)
             components?.queryItems = queryParams
             request.url = components?.url
             
-        case .body(let body):
-            let params = body?.toDictionary() ?? [:]
-            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
+        case .requestBody(let body):
+            request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
             
-        case .requestParameters(let requestParams):
-            let params = requestParams
-            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
+        case .queryBody(let query, let body):
+            let queryParams = query.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
+            var components = URLComponents(string: url.appendingPathComponent(path).absoluteString)
+            components?.queryItems = queryParams
+            request.url = components?.url
+            
+            request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
+            
         case .requestPlain:
-            break;
+            break
+            
         }
         
         return request
@@ -89,7 +93,7 @@ extension BaseRouter {
     }
     
     var header: HeaderType {
-        return HeaderType.default
+        return HeaderType.withToken
     }
     
     var multipart: MultipartFormData {
@@ -100,19 +104,8 @@ extension BaseRouter {
 // MARK: ParameterType
 
 enum RequestParams {
-    case query(_ parameter: Codable?)
-    case body(_ parameter: Codable?)
-    case requestParameters(_ parameter: [String : Any])
+    case queryBody(_ query: [String : Any], _ body: [String : Any])
+    case query(_ query: [String : Any])
+    case requestBody(_ body: [String : Any])
     case requestPlain
-}
-
-// MARK: toDictionary
-
-extension Encodable {
-    func toDictionary() -> [String: Any] {
-        guard let data = try? JSONEncoder().encode(self),
-              let jsonData = try? JSONSerialization.jsonObject(with: data),
-              let dictionaryData = jsonData as? [String: Any] else { return [:] }
-        return dictionaryData
-    }
 }
